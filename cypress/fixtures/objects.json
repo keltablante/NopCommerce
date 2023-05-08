@@ -1,0 +1,71 @@
+{
+
+  "login":{
+    "txtEmail": "//input[@id='Email']",
+    "txtPassword": "//input[@id='Password']",
+    "btnLogin": "//button[contains(text(),'Log in')]"
+  },
+
+  "dashboard":{
+    "dashBoard": "//h1[contains(text(),'Dashboard')]",
+    "lnkCustomerParent" : "//i[@class='nav-icon far fa-user']//parent::a",
+    "lnkCustomerChild" : "//a[@href='/Admin/Customer/List']//p",
+    "lnkPromotions" : "//i[@class='nav-icon fas fa-tags']//following-sibling::p",
+    "lnkDiscounts" : "//a[@href='/Admin/Discount/List' or contains(text(),'Discounts')]",
+    "lnkConfiguration" : "//div[@class='os-content']//descendant::p[contains(text(),'Configuration')]"
+  },
+
+  "discount" :{
+    "btnAddNewDiscount" : "//a[@href='/Admin/Discount/Create']",
+    "tglMode" : "//div[@class='onoffswitch']//child::input[@type='checkbox']",
+    "chkIsActive" : "//input[@id='IsActive']",
+    "txtName" : "//input[@id='Name']",
+    "slctDiscountType" : "//select[@id='DiscountTypeId']",
+    "chkUsePercentage" : "//input[@id='UsePercentage']",
+    "clkDiscountAmountPercentage" : "//div[@id='pnlDiscountPercentage']//descendant::input[not(@id)]",
+    "txtDiscountAmountPercentage" : "//input[@name='DiscountPercentage']",
+    "clkMaxDiscountAmountPercentage" : "//div[@id='pnlMaximumDiscountAmount']//descendant::input[not(@id)]",
+    "txtMaxDiscountAmountPercentage" : "//input[@name='MaximumDiscountAmount']",
+    "chkRequiresCouponCode" : "//input[@id='RequiresCouponCode']",
+    "txtCouponCode" : "//input[@name='CouponCode']",
+    "btnSave" : "//button[@name='save']",
+    "btnSaveAndContinue" : "//button[@name='save-continue']",
+    "txtStartDate" : "//input[@id='StartDateUtc']",
+    "txtEndDate" : "//input[@id='EndDateUtc']",
+    "chkIsCumulative" : "//input[@id='IsCumulative']",
+    "slctDiscountLimitation" : "//select[@id='DiscountLimitationId']",
+    "txtNTimes" : "//div[@id='pnlLimitationTimes']//descendant::input[not(@name)]",
+    "spnNtimesIncreaseValue" : "//div[@id='pnlLimitationTimes']//descendant::span[@title='Increase value']",
+    "txtAdminComment" : "//textarea[@name='AdminComment']",
+
+      "requirements" : {
+        "divRequirements" : "//div[contains(text(),'Requirements')]",
+        "iExpandRequirements" : "//div[@id='discount-requirements']//descendant::i[@class='fa toggle-icon fa-plus' or @class='fa toggle-icon fa-minus']",
+        "slctDiscountRequirementType" : "//select[@name='AddDiscountRequirement']",
+        "txtGroupName" : "//input[@name='GroupName']",
+        "btnSaveRequirement" : "//button[@id='saverequirement']",
+        "lnkDiscounts" : "//a[@href='/Admin/Discount/List' and @class='nav-link active']"
+      },
+
+      "filter" : {
+        "txtCouponCode" : "//input[@id='SearchDiscountCouponCode']",
+        "txtDiscountName" : "//input[@id='SearchDiscountName']",
+        "btnSearch" : "//button[@id='search-discounts']"
+      }
+
+  },
+  "Configuration" : {
+    "lnkSettings" : "//div[@class='os-content']//descendant::p[contains(text(),'Settings')]",
+    "Settings" : {
+      "lnkGeneralSettings": "//a[@href='/Admin/Setting/GeneralCommon']",
+      "GeneralSettings" : {
+        
+        "btnUploadFile" : "//div[@id='pdf-logo-picture']//descendant::input[@title='file input']",
+        "spnSamplePng" : "//span[@title='sample.png']"
+      }
+    }
+  },
+  "btnLogout" : "//a[@href='/logout']"
+  
+}
+  

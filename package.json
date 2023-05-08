@@ -1,0 +1,60 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "test:all:headless" : "npm run test:api:all:headless && npm run test:promotion:all:headless && npm run test:upload:all:headless --e2e",
+    "test:all:headed" : "npm run test:api:all:headed && npm run test:promotion:all:headed && npm run test:upload:all:headed --e2e",
+
+    "test:api:all:headless" : "npm run test:api:chrome:headless && npm run test:api:firefox:headless && npm run test:api:edge:headless --e2e",
+    "test:api:all:headed" : "npm run test:api:chrome:headed && npm run test:api:firefox:headed && npm run test:api:edge:headed --e2e",
+
+    "test:promotion:all:headless" : "npm run test:promotion:chrome:headless && npm run test:promotion:firefox:headless && npm run test:promotion:edge:headless --e2e",
+    "test:promotion:all:headed" : "npm run test:promotion:chrome:headed && npm run test:promotion:firefox:headed && npm run test:promotion:edge:headed --e2e",
+
+    "test:upload:all:headless" : "npm run test:upload:chrome:headless && npm run test:upload:firefox:headless && npm run test:upload:edge:headless --e2e",
+    "test:upload:all:headed" : "npm run test:upload:chrome:headed && npm run test:upload:firefox:headed && npm run test:upload:edge:headed --e2e",
+
+
+    "test:api:chrome:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser chrome --e2e",
+    "test:api:firefox:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser firefox --e2e",
+    "test:api:edge:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser edge --e2e",
+
+    "test:api:chrome:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser chrome --headed --e2e",
+    "test:api:firefox:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser firefox --headed --e2e",
+    "test:api:edge:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/API_Test.cy.js --browser edge --headed --e2e",
+
+    "test:promotion:chrome:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser chrome --e2e",
+    "test:promotion:firefox:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser firefox --e2e",
+    "test:promotion:edge:headless": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser edge --e2e",
+
+    "test:promotion:chrome:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser chrome --headed --e2e",
+    "test:promotion:firefox:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser firefox --headed --e2e",
+    "test:promotion:edge:headed": "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Promotions.cy.js --browser edge --headed --e2e",
+
+    "test:upload:chrome:headless" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser chrome --e2e",
+    "test:upload:firefox:headless" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser firefox --e2e",
+    "test:upload:edge:headless" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser edge --e2e",
+
+    "test:upload:chrome:headed" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser chrome --headed --e2e",
+    "test:upload:firefox:headed" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser firefox --headed --e2e",
+    "test:upload:edge:headed" : "npx cypress run --spec cypress/e2e/nopCommerce/Tests/Upload.cy.js --browser edge --headed --e2e"
+
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.3",
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.11.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.4.0",
+    "cypress-xpath": "^2.0.1",
+    "faker": "^6.6.6",
+    "mochawesome": "^7.1.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
