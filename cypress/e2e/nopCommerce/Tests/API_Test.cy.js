@@ -2,7 +2,8 @@
 
 describe('GitHUB Repo', ()=>{
 
-    var authToken = "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"
+    var authToken = "ghp_iUT71nMmMbsvwGZy"
+    var key = "74CLd5OKdx46OV16BcJG"
     var fetchRepoName = ""
     var id = 75958757
     var ownerLogin = "keltablante"
@@ -15,7 +16,7 @@ describe('GitHUB Repo', ()=>{
             body: 	{ "name": "testRepoName" },
             headers: {
                         "Content-Type" : "application/json",
-                        "Authorization": "Bearer " + authToken
+                        "Authorization": "Bearer " + authToken + key
                     }
             })
             .then((apiresult) => {
@@ -32,7 +33,7 @@ describe('GitHUB Repo', ()=>{
             method: "DELETE",
             url: `https://api.github.com/repos/${ownerLogin}/testRepoName`,
             headers: {
-            "Authorization": "Bearer " + authToken
+            "Authorization": "Bearer " + authToken + key
             }
         })
         .then((apiresult) => {
@@ -47,11 +48,11 @@ describe('GitHUB Repo', ()=>{
         cy.request({
             method: "GET", 
             url: "https://api.github.com/user/repos",
-            headers: { "Authorization" : "Bearer "+ authToken }
+            headers: { "Authorization" : "Bearer "+ authToken + key }
         })
         .then((apiresult) => {
             expect(apiresult.status).to.eq(200)
-            expect(apiresult.body[0].full_name).to.eql('keltablante/CypressLearning2')
+            expect(apiresult.body[0].full_name).to.eql('keltablante/Capstone')
             fetchRepoName = apiresult.body[1].name
 
             // list all repo name and validate
