@@ -36,5 +36,8 @@ describe('Test upload file in settings', () => {
         global.click(objects.Configuration.Settings.lnkGeneralSettings)
         global.upload(objects.Configuration.Settings.GeneralSettings.btnUploadFile, 'sample.png')
         global.verify(objects.Configuration.Settings.GeneralSettings.spnSamplePng)
+        global.findImgAndProceed(objects.Configuration.Settings.GeneralSettings.imgSample)
+        // LOGOUT
+        global.click(objects.btnLogout)
     });
 });

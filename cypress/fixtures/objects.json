@@ -61,7 +61,8 @@
       "GeneralSettings" : {
         
         "btnUploadFile" : "//div[@id='pdf-logo-picture']//descendant::input[@title='file input']",
-        "spnSamplePng" : "//span[@title='sample.png']"
+        "spnSamplePng" : "//span[@title='sample.png']",
+        "imgSample" : "//img[contains(@src, 'sample')]"
       }
     }
   },

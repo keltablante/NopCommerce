@@ -66,6 +66,17 @@ class Global {
       cy.xpath(loc).attachFile(fileLoc)
     }
 
+    findImgAndProceed(imgSelector) {
+      cy.xpath(imgSelector)
+        .then(($img) => {
+          if ($img.length) {
+            cy.log('Image found. Proceeding...')
+          } else {
+            cy.log('Image not found. Waiting for 2 seconds...')
+            cy.wait(2000)
+          }
+        })
+    }
 
 }
 
