@@ -1,4 +1,5 @@
 *Cypress Example - NOPCommerce*
+
 This project consists of automated testing of the cases listed below:  
 
 TC#1: Add discount (Basic)
