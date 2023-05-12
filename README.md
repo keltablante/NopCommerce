@@ -75,4 +75,4 @@ Instruction:
 
 6. Download and install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress
 
-7. Using cypress, navigate to the spec files under E2E folder and execute.
+7. Using cypress, navigate to the spec files (.cy.js) under cypress/E2E/Tests and execute.
