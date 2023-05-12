@@ -53,7 +53,6 @@ describe('GitHUB Repo', ()=>{
         .then((apiresult) => {
             expect(apiresult.status).to.eq(200)
             expect(apiresult.body[0].full_name).to.eql('keltablante/Capstone')
-            fetchRepoName = apiresult.body[1].name
 
             // list all repo name and validate
             apiresult.body.forEach((repo) => {
