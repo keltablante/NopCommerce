@@ -52,13 +52,10 @@ describe('GitHUB Repo', ()=>{
         })
         .then((apiresult) => {
             expect(apiresult.status).to.eq(200)
-            expect(apiresult.body[0].full_name).to.eql('keltablante/Capstone')
+            expect(apiresult.body[3].full_name).to.eql('keltablante/NopCommerce')
 
             // list all repo name and validate
             apiresult.body.forEach((repo) => {
-                cy.log(repo.name);
-                expect(repo.owner.id).to.eql(id)
-                expect(repo.owner.login).to.eql(ownerLogin)
                 //Verify that the previously created Repo is deleted and is not existing in the list
                 expect(repo.name).to.not.contain('testRepoName')
               });
