@@ -69,10 +69,14 @@ Instruction:
 
 3. Click "Generating a new SSH key and adding it to the ssh-agent"
 
-4. Clone the project to your local machine using SSH.
+4. Clone the project to your local machine using SSH
 
 5. Download and install node.js: https://nodejs.org/en/download
 
 6. Download and install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress
 
-7. Using cypress, navigate to the spec files (.cy.js) under cypress/E2E/Tests and execute.
+7. Open cypress using $npx cypress open and navigate to the project folder
+
+8. Navigate to the spec files (.cy.js) under cypress/E2E/Tests and execute 
+
+9 Or run the tests headlessly with reports via terminal using the scripts provided under package.json
