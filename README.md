@@ -77,6 +77,6 @@ Instruction:
 
 7. Open cypress using $npx cypress open and navigate to the project folder
 
-8. Navigate to the spec files (.cy.js) under cypress/E2E/Tests and execute 
+8. Navigate to the spec files (.cy.js) under cypress/E2E/Tests and execute
 
-9 Or run the tests headlessly with reports via terminal using the scripts provided under package.json
+9. Or run the tests headlessly with reports via terminal using the scripts provided under package.json
